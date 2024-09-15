@@ -3,7 +3,7 @@
 # AWS와 NHN Cloud를 이용한 멀티클라우드 재해복구시스템
 </div>
 
-> 이 프로젝트는 TickettingWeb(https://github.com/KDT-EEM/TickettingWeb/edit/main/README.md#5-클라우드-구축-과정)에서 클라우드 구조를 재구축한 프로젝트입니다.
+> ‼️이 프로젝트는 [NHN 클라우드를 활용한 IaaS 티켓팅 웹사이트](https://github.com/KDT-EEM/TickettingWeb/edit/main/README.md#5-클라우드-구축-과정)에서 클라우드 구조를 멀티 클라우드로 재구축한 프로젝트입니다.‼️
 
 <div align="center">
   
@@ -192,10 +192,9 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 </details>
 
 ## 5.결과 영상
-https://www.youtube.com/watch?v=RK5H21K5i-w
 
-<iframe width="704" height="480" src="https://www.youtube.com/embed/RK5H21K5i-w" title="공개소프트웨어 개발자 대회 시연영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+[3차 프로젝트 결과](https://www.youtube.com/watch?v=RK5H21K5i-w)
+[![3차프로젝트 결과](https://img.youtube.com/vi/RK5H21K5i-w/0.jpg)](https://www.youtube.com/watch?v=RK5H21K5i-w)
 
 
 

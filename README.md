@@ -43,7 +43,7 @@
 
 **이태민(클라우드)** : AWS 인프라 설계 및 구축, 자동화, 문제 해결, 모니터링을 통한 고가용성 및 확장성 구현
 
-**강석진(백엔드)** : NHN 아키텍처 설계 및 구축, Docker & Kubernetes 활용, NHN RDS, VPN 구축, RDS 동기화
+**강석진(백엔드)** : NHN 아키텍처 설계 및 구축, Docker & Kubernetes 활용한 서버 구축 및 배포, NHN RDS, VPN 구축 및 연동, AWS,NHN RDS 동기화, failover 시스템 구현
 
 **양현수(서버)** : NHN 아키텍처 구축, Docker & Kubernetes 활용한 Web 배포, NKS 오토스케일링 구축, CICD(Jenkins)파이프라인 구축, 모니터링(prometheus, Grafana)
 

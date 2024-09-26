@@ -205,7 +205,7 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 - VPN 서버에서 NHN RDS 와 AWS RDS 연동 및 코드 실행
 - crontab 과 스크립트 파일 활용하여 실시간 자동 배포
 - NHN RDS의 백업 데이터 베이스를 AWS RDS로 실시간 적용
-- AWS 서비스에서 데이터 발생시 스크립트를 활용하여 NHN RDS와 동기화화 
+- AWS 서비스에서 데이터 발생시 스크립트를 활용하여 NHN RDS와 동기화
 
 ### Router 53
 - AWS와 NHN 의 로드벨런서 웹 주소로 헬스 체크 ID 설정

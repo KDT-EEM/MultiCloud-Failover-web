@@ -187,7 +187,7 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 
 ### NHN - Object Storage
 - S3 API 자격 증명 기능을 통해 AWS의 S3 호환 기능 사용
-- 스크립트와 crontab 을 이용한 자동 백업 데이터 생성
+- RDS와 Object storage를 연동하여 스크립트와 crontab 을 이용한 자동 백업 데이터 생성
 
 ### NHN - Block Storage
 - NKS로 인스턴스를 생성하여 하나의 인스턴스 당 한 개의 블록 스토리지가 자동으로 생성.

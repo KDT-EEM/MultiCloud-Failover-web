@@ -73,6 +73,7 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
   이를 통해 VPN 연결이 이루어짐.
 - 설정한 고객 게이트웨이와 가상 프라이빗 게이트웨이를 site-to-site VPN에 연결
 - 정적 IP 접두사에 nhn 클라우드에 strongswan이 설치된 VPC 서버의 사설 CIDR 주소(192.168.0.0/16) 입력
+- VPN과 연결할 라우팅 테이블에 NHN Cloud에 있는 VPN 서버가 설치된 VPC CIDR 추가
 - 해당 VPN은 두 개의 터널로 구성되어 있으며 각 터널은 up 상태를 유지.
 
 ### AWS – Application Load Balancer
@@ -184,10 +185,42 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 ### NHN - RDS for mySQL 모니터링
 - NHN RDS에서 지원하는 모니터링 기능을 통해 RDS의 트래픽 변화량 확인 가능.
 
+### NHN - Object Storage
+- S3 API 자격 증명 기능을 통해 AWS의 S3 호환 기능 사용
+- 스크립트와 crontab 을 이용한 자동 백업 데이터 생성
+
 ### NHN - Block Storage
 - NKS로 인스턴스를 생성하여 하나의 인스턴스 당 한 개의 블록 스토리지가 자동으로 생성.
 - 블록 스토리지는 여러 개의 인스턴스에서 동시에 연결하여 사용할 수 있으며, 연결이 해제된 블록 스토리지는 다른 인스턴스에 연결하여 사용 가능.
 - 스냅샷을 이용해 특정 시점의 블록 스토리지 상태를 저장 및 복구 가능.
+
+### NHN - VPN 서버
+- management 서버에 strongswan설치 ->  VPN 서버로 설정 -> AWS와 VPN으로 연동
+- /etc/ipsec.conf 에 VPN 터널 가용성을 위해 tunnel 1 과 tunnel 2 정보 입력
+- left id 에는 VPN 서버의 공인 ip, right에는 각 터널에 해당하는 외부 ip 입력
+- leftupdown에는 각 터널의 내부 ip와 사용하는 AWS의 VPC CIDR 입력
+- /etc/ipsec.secrets에 사전 공유키(PSK) 설정을 통해 VPN 서버의 공인 ip와 터널의 공인 ip 연결
+
+### NHN - 클라우드 간 RDS 동기화
+- VPN 서버에서 NHN RDS 와 AWS RDS 연동 및 코드 실행
+- crontab 과 스크립트 파일 활용하여 실시간 자동 배포
+- NHN RDS의 백업 데이터 베이스를 AWS RDS로 실시간 적용
+- AWS 서비스에서 데이터 발생시 스크립트를 활용하여 NHN RDS와 동기화화 
+
+### Router 53
+- AWS와 NHN 의 로드벨런서 웹 주소로 헬스 체크 ID 설정
+- crontab과 스크립트 파일을 활용하여 실시간 헬스 체크
+- NHN 웹 서비스를 기본으로 하고 NHN 서버 다운 시 AWS 서버 작동
+- 
+
+
+
+
+
+
+
+  
+
 
 
 </div>

@@ -71,6 +71,8 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 ### AWS - VPN
 - 고객 게이트웨이 IP 주소는 `133.186.151.102`(NHN측 VPN 서버)  
   이를 통해 VPN 연결이 이루어짐.
+- 설정한 고객 게이트웨이와 가상 프라이빗 게이트웨이를 site-to-site VPN에 연결
+- 정적 IP 접두사에 nhn 클라우드에 strongswan이 설치된 VPC 서버의 사설 CIDR 주소(192.168.0.0/16) 입력
 - 해당 VPN은 두 개의 터널로 구성되어 있으며 각 터널은 up 상태를 유지.
 
 ### AWS – Application Load Balancer

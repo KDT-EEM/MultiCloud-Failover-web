@@ -163,12 +163,17 @@ AWS 클라우드와 NHN 클라우드를 활용한 멀티 클라우드 티켓팅 
 - NAT 게이트웨이와 인터넷 게이트웨이 설정.
 
 ### NHN - CI/CD 구축
-#### CI
-- Webhook 활용.
-- Pipeline 코드 작성.
-
 #### CD
-- Deployment.yaml 파일과 Hpa.yaml 파일 작성.
+- Docker와 NCR사용.
+- K8s로에 애플리케이션 자동 배포.
+
+### 모니터링
+- K8s로 Matrics pull.
+- Prometheus로 모니터링 및 데이터 수집.
+- Grafana로 데이터 시각화.
+
+### NHN - Autoscailing
+-  Deployment.yaml 파일과 Hpa.yaml 파일 작성.
 - 부하 → CPU 확인 → Auto Scaling → CPU 확인.  
   command: ["ab", "-n", "100000", "-c", "100", "http://133.186.209.216/"]  
   Apache Benchmark 도구를 사용하여 http://133.186.209.216/ URL에 대해 부하 테스트를 수행.
